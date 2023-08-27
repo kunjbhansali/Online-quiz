@@ -135,7 +135,7 @@ class student:
             cursor.execute(op)
             row=cursor.fetchone()
             for j in range(4):
-                print (j+1, ". ", row[j])
+                print ("Option ", j+1, ". ", row[j])
             print ("\n")
             
             choosedans=int(input('Enter your answer: '))
