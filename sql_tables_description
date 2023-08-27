@@ -1,0 +1,55 @@
+# Mysql Tables description
+
+# Existing tables
++---------------------+
+| Tables_in_onlineexm |
++---------------------+
+| exam                |
+| marks               |
+| student_details     |
+| supervisor          |
++---------------------+
+
+# 1. supervisor table;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| id       | int(11)     | NO   | PRI | NULL    |       |
+| name     | varchar(50) | YES  |     | NULL    |       |
+| password | varchar(20) | YES  |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+
+# 2. exam table;
++----------------+--------------+------+-----+---------+----------------+
+| Field          | Type         | Null | Key | Default | Extra          |
++----------------+--------------+------+-----+---------+----------------+
+| Questionnumber | int(11)      | NO   | PRI | NULL    | auto_increment |
+| Question       | char(255)    | YES  |     | NULL    |                |
+| optionA        | varchar(100) | YES  |     | NULL    |                |
+| optionB        | varchar(100) | YES  |     | NULL    |                |
+| optionC        | varchar(100) | YES  |     | NULL    |                |
+| optionD        | varchar(100) | YES  |     | NULL    |                |
+| correctans     | int(11)      | YES  |     | NULL    |                |
++----------------+--------------+------+-----+---------+----------------+
+
+# 3. student_details table
++--------+--------------+------+-----+---------+-------+
+| Field  | Type         | Null | Key | Default | Extra |
++--------+--------------+------+-----+---------+-------+
+| RollNo | int(11)      | NO   | PRI | NULL    |       |
+| Name   | varchar(100) | YES  |     | NULL    |       |
+| class  | varchar(3)   | YES  |     | NULL    |       |
+| mob    | int(11)      | YES  | UNI | NULL    |       |
+| gmail  | varchar(40)  | YES  | UNI | NULL    |       |
++--------+--------------+------+-----+---------+-------+
+
+# 4. marks table;
++---------------+---------+------+-----+---------+-------+
+| Field         | Type    | Null | Key | Default | Extra |
++---------------+---------+------+-----+---------+-------+
+| ROllNo        | int(11) | NO   | PRI | NULL    |       |
+| rightquestion | int(11) | YES  |     | NULL    |       |
+| wrongquestion | int(11) | YES  |     | NULL    |       |
+| skipped       | int(11) | YES  |     | NULL    |       |
+| totalmarks    | int(11) | YES  |     | NULL    |       |
++---------------+---------+------+-----+---------+-------+
